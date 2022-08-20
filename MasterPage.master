@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   
+
+   <title></title>
+ 
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+  
+   
+
+    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" ></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" ></script>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+</head>
+<body>  
+    <form id="form1" runat="server">
+    
+        <div class="container-fluid">
+          
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg py-4">
+                <img src="images/FinalLogo.jpg" width="300" height="70"/>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               
+               <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                  <a href="Home.aspx" ><i class="fa fa-home" style="font-size:xx-large; color:white"></i></a>  
+                    </li>              
+                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+                    
+                      <li>
+                       
+                          <div class="dropdown">
+                <button class="dropdown-toggle btn btn-secondary" type="button" id="LoginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                LOGIN
+                 </button>
+                 <ul class="dropdown-menu" aria-labelledby="LoginDropdown">
+                 <li><a class="dropdown-item" href="Login.aspx">Login as User</a></li>
+                <li><a class="dropdown-item" href="Admin Login.aspx">Login as admin</a></li>
+    
+                </ul>
+                </div>
+                      </li>
+
+                   
+                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+                   
+                   <li class="nav-item active">
+                       <asp:LinkButton Class="nav-link" ID="LinkButton1" ForeColor="White" runat="server" Visible="false"></asp:LinkButton>
+                   </li>
+
+                    <li class="nav-item active">
+                         <asp:LinkButton Class="nav-link" ForeColor="White" ID="Linkbutton2" runat="server" OnClick="Linkbutton2_Click" >Signup</asp:LinkButton>
+                       
+                   </li>
+
+                    <li class="nav-item active">
+                       <asp:LinkButton Class="nav-link" ID="LinkButton3" ForeColor="White" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                      
+                   </li>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+                </ul>
+                     </div>
+                     
+                     </nav>
+                </div>
+        
+        
+        
+        
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+       
+         </asp:ContentPlaceHolder>
+  
+        
+       
+    </form>
+</body>
+</html>
